@@ -12,6 +12,7 @@
 		889239492A7AE69D00B9566A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889239482A7AE69D00B9566A /* ResultsView.swift */; };
 		8892394B2A7C283700B9566A /* ResearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892394A2A7C283700B9566A /* ResearchView.swift */; };
 		8892394D2A7C28A300B9566A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892394C2A7C28A300B9566A /* AboutView.swift */; };
+		889239512A7C3E3400B9566A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889239502A7C3E3300B9566A /* Recipe.swift */; };
 		E28A95E22A7860FC006819CC /* SymptoChefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28A95E12A7860FC006819CC /* SymptoChefApp.swift */; };
 		E28A95E42A7860FC006819CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28A95E32A7860FC006819CC /* ContentView.swift */; };
 		E28A95E62A7860FD006819CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28A95E52A7860FD006819CC /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		889239482A7AE69D00B9566A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		8892394A2A7C283700B9566A /* ResearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchView.swift; sourceTree = "<group>"; };
 		8892394C2A7C28A300B9566A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		889239502A7C3E3300B9566A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		E28A95DE2A7860FC006819CC /* SymptoChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymptoChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28A95E12A7860FC006819CC /* SymptoChefApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptoChefApp.swift; sourceTree = "<group>"; };
 		E28A95E32A7860FC006819CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		E28A95E02A7860FC006819CC /* SymptoChef */ = {
 			isa = PBXGroup;
 			children = (
+				889239502A7C3E3300B9566A /* Recipe.swift */,
 				889239482A7AE69D00B9566A /* ResultsView.swift */,
 				E2F261BC2A79B616007E8109 /* HelpPage.swift */,
 				8892394C2A7C28A300B9566A /* AboutView.swift */,
@@ -167,6 +170,7 @@
 				8892394B2A7C283700B9566A /* ResearchView.swift in Sources */,
 				E28A95E22A7860FC006819CC /* SymptoChefApp.swift in Sources */,
 				E2F261BD2A79B616007E8109 /* HelpPage.swift in Sources */,
+				889239512A7C3E3400B9566A /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

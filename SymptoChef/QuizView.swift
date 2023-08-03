@@ -13,6 +13,7 @@ struct QuizView: View {
     @State var headache : Bool
     @State var nausea : Bool
     @State var heartburn : Bool
+    @State var symptoms = [String]()
     var body: some View {
         NavigationStack {
             ZStack {
@@ -38,6 +39,10 @@ struct QuizView: View {
                                 Spacer()
                             }
                         }
+                        .onChange(of: soreThroat) { value in
+                            symptoms.append("sore throat")
+                            print(value)
+                        }
                         .toggleStyle(CheckboxToggleStyle())
                         .padding()
                         Toggle(isOn : $fever) {
@@ -47,6 +52,10 @@ struct QuizView: View {
                                     .foregroundColor(.textPurple)
                                 Spacer()
                             }
+                        }
+                        .onChange(of: fever) { value in
+                            symptoms.append("fever")
+                            print(value)
                         }
                         .toggleStyle(CheckboxToggleStyle())
                         .padding()
@@ -58,6 +67,10 @@ struct QuizView: View {
                                 Spacer()
                             }
                         }
+                        .onChange(of: headache) { value in
+                            symptoms.append("headache")
+                            print(value)
+                        }
                         .toggleStyle(CheckboxToggleStyle())
                         .padding()
                         Toggle(isOn : $nausea) {
@@ -67,6 +80,10 @@ struct QuizView: View {
                                     .foregroundColor(.textPurple)
                                 Spacer()
                             }
+                        }
+                        .onChange(of: nausea) { value in
+                            symptoms.append("nausea")
+                            print(value)
                         }
                         .toggleStyle(CheckboxToggleStyle())
                         .padding()
@@ -78,18 +95,21 @@ struct QuizView: View {
                                 Spacer()
                             }
                         }
+                        .onChange(of: heartburn) { value in
+                            symptoms.append("heartburn")
+                            print(value)
+                        }
                         .toggleStyle(CheckboxToggleStyle())
                         .padding()
                     }
                     Spacer()
-                    NavigationLink(destination : ResultsView().navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination : ResultsView(symptoms : self.symptoms).navigationBarBackButtonHidden(true)) {
                         Text("Submit")
-                            .foregroundColor(.textPurple)
+                        .foregroundColor(.textPurple)
                     }
                     .buttonBorderShape(.roundedRectangle)
                     .buttonStyle(.bordered)
                     .foregroundColor(.black)
-                    .backgroundStyle(.blue)
                     .padding()
                 }
                 .padding()

@@ -42,17 +42,17 @@ struct ResearchView: View {
                             .foregroundColor(.textPurple)
                     }
                     Spacer()
-                    NavigationLink(destination: QuizView(soreThroat: false, fever: false, headache: false, nausea: false, heartburn: false)) {
+                    NavigationLink(destination: QuizView(soreThroat: false, fever: false, headache: false, nausea: false, heartburn: false).navigationBarBackButtonHidden(true)) {
                         Text("Quiz")
                             .foregroundColor(.textPurple)
                     }
                     Spacer()
-                    NavigationLink(destination: HelpPage()) {
+                    NavigationLink(destination: HelpPage().navigationBarBackButtonHidden(true)) {
                         Text("Help")
                             .foregroundColor(.textPurple)
                     }
                     Spacer()
-                    NavigationLink(destination: AboutView()) {
+                    NavigationLink(destination: AboutView().navigationBarBackButtonHidden(true)) {
                         Text("About")
                             .foregroundColor(.textPurple)
                     }

@@ -42,8 +42,31 @@ struct AboutView: View {
                             Text("Sam Yavnilovitch").font(.title3).fontWeight(.bold).foregroundColor(.textPurple).padding(.trailing, 21.0).padding(.bottom, -1.0)
                             Text("Hi, I'm Sam! I am so happy you've decided to visit our SymptoChef application, and I hope you've enjoyed your stay. My favorite food to eat when sick is probably the vegetable soup my mom makes!").font(.body).foregroundColor(.textPurple).padding(.horizontal, 3.0)
                         }
-                    }.padding()
-                    
+                    }
+                    .padding()
+                    .toolbar {
+                        ToolbarItemGroup(placement: .bottomBar) {
+                            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
+                                Text("Home")
+                                    .foregroundColor(.textPurple)
+                            }
+                            Spacer()
+                            NavigationLink(destination: QuizView(soreThroat: false, fever: false, headache: false, nausea: false, heartburn: false).navigationBarBackButtonHidden(true)) {
+                                Text("Quiz")
+                                    .foregroundColor(.textPurple)
+                            }
+                            Spacer()
+                            NavigationLink(destination: ResearchView().navigationBarBackButtonHidden(true)) {
+                                Text("Research")
+                                    .foregroundColor(.textPurple)
+                            }
+                            Spacer()
+                            NavigationLink(destination: HelpPage().navigationBarBackButtonHidden(true)) {
+                                Text("Help")
+                                    .foregroundColor(.textPurple)
+                            }
+                        }
+                    }
                 }
             }
         }
