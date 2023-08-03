@@ -44,6 +44,6 @@ struct HelpPage: View {
 
 struct HelpPage_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HelpPage()
     }
 }

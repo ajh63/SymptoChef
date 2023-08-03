@@ -13,63 +13,70 @@ struct QuizView: View {
     @State var stomachAche : Bool
     @State var nausea : Bool
     var body: some View {
-        VStack {
-            Text("SymptoQuiz\n")
-                .font(.largeTitle)
-            Text("What are your current symptoms?\n")
-                .font(.title2)
-            Text("Check all that are applicable")
-                .foregroundColor(.gray)
-            Spacer()
-            VStack(alignment: .leading) {
-                Toggle(isOn : $soreThroat) {
-                    HStack {
-                        Spacer()
-                        Text("Sore throat")
-                        Spacer()
+        ZStack {
+            Color.backgroundPink
+                .ignoresSafeArea()
+            VStack {
+                Text("SymptoQuiz\n")
+                    .font(.largeTitle)
+                Text("What are your current symptoms?\n")
+                    .font(.title2)
+                Text("Check all that are applicable")
+                    .foregroundColor(.gray)
+                Spacer()
+                VStack(alignment: .leading) {
+                    Toggle(isOn : $soreThroat) {
+                        HStack {
+                            Spacer()
+                            Text("Sore throat")
+                                .foregroundColor(.textPurple)
+                            Spacer()
+                        }
                     }
-                }
-                .toggleStyle(CheckboxToggleStyle())
-                .padding()
-                Toggle(isOn : $fever) {
-                    HStack {
-                        Spacer()
-                        Text("Fever")
-                        Spacer()
+                    .toggleStyle(CheckboxToggleStyle())
+                    .padding()
+                    Toggle(isOn : $fever) {
+                        HStack {
+                            Spacer()
+                            Text("Fever")
+                                .foregroundColor(.textPurple)
+                            Spacer()
+                        }
                     }
-                }
-                .toggleStyle(CheckboxToggleStyle())
-                .padding()
-                Toggle(isOn : $stomachAche) {
-                    HStack {
-                        Spacer()
-                        Text("Stomachache")
-                        Spacer()
+                    .toggleStyle(CheckboxToggleStyle())
+                    .padding()
+                    Toggle(isOn : $stomachAche) {
+                        HStack {
+                            Spacer()
+                            Text("Stomachache")
+                                .foregroundColor(.textPurple)
+                            Spacer()
+                        }
                     }
-                }
-                .toggleStyle(CheckboxToggleStyle())
-                .padding()
-                Toggle(isOn : $nausea) {
-                    HStack {
-                        Spacer()
-                        Text("Nausea")
-                        Spacer()
+                    .toggleStyle(CheckboxToggleStyle())
+                    .padding()
+                    Toggle(isOn : $nausea) {
+                        HStack {
+                            Spacer()
+                            Text("Nausea")
+                            Spacer()
+                        }
                     }
+                    .toggleStyle(CheckboxToggleStyle())
+                    .padding()
                 }
-                .toggleStyle(CheckboxToggleStyle())
+                Spacer()
+                NavigationLink(destination : ResultsView()) {
+                    Text("Submit")
+                }
+                .buttonBorderShape(.roundedRectangle)
+                .buttonStyle(.bordered)
+                .foregroundColor(.black)
+                .backgroundStyle(.blue)
                 .padding()
             }
-            Spacer()
-            NavigationLink(destination : ResultsView()) {
-                Text("Submit")
-            }
-            .buttonBorderShape(.roundedRectangle)
-            .buttonStyle(.bordered)
-            .foregroundColor(.black)
-            .backgroundStyle(.blue)
             .padding()
         }
-        .padding()
     }
 }
 
