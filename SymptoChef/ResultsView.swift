@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ResultsView: View {
     var symptoms : Array<String>
-    var recipes = [Recipe(recipe: "Oatmeal", picture: "oatmeal", link: "https://www.cookforyourlife.org/recipes/oatmeal/", goodFor: ["Nausea", "Headache", "Sore throat", "Heartburn", "Fever"], badFor: []), Recipe(recipe: "Lemon Ginger Tea", picture: "tea", link: "https://www.acouplecooks.com/lemon-ginger-tea/", goodFor: ["Sore throat", "Nausea", "Headache", "Heartburn", "Fever"], badFor: [""]), Recipe(recipe: "Fried Rice with Ginger", picture: "fried_rice", link: "https://www.acouplecooks.com/fried-rice/", goodFor: ["Fever", "Headache", "Heartburn"], badFor: ["Nausea"]), Recipe(recipe: "Broccoli Stir Fry", picture: "broccoli", link: "https://www.acouplecooks.com/broccoli-stir-fry/", goodFor: ["Headache, Heartburn"], badFor: ["Nausea"])]
+    var recipes = [Recipe(recipe: "Oatmeals", picture: "oatmeal", link: "https://www.cookforyourlife.org/recipes/oatmeal/", goodFor: ["nausea", "headache", "sore throat", "heartburn", "fever"], badFor: []), Recipe(recipe: "Lemon Ginger Tea", picture: "tea", link: "https://www.acouplecooks.com/lemon-ginger-tea/", goodFor: ["Sore throat", "nausea", "headache", "heartburn", "fever"], badFor: [""]), Recipe(recipe: "Fried Rice with Ginger", picture: "fried_rice", link: "https://www.acouplecooks.com/fried-rice/", goodFor: ["fever", "headache", "heartburn"], badFor: ["nausea"]), Recipe(recipe: "Broccoli Stir Fry", picture: "broccoli", link: "https://www.acouplecooks.com/broccoli-stir-fry/", goodFor: ["headache, heartburn"], badFor: ["nausea"])]
     var body: some View {
         let bestRecipe = getBestRecipe(symptoms: self.symptoms, recipes: self.recipes)
         NavigationStack {
