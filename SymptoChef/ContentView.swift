@@ -32,14 +32,14 @@ struct ContentView: View {
                         Text("Research")
                             .font(.title2)
                             .foregroundColor(.textPurple)
-                            .position(x: 175, y: 160)
+                            .position(x: 175, y: 100)
                             .kerning(0.5)
                     }
                     NavigationLink(destination: HelpPage().navigationBarBackButtonHidden(true)) {
                         Text("Help")
                             .font(.title2)
                             .foregroundColor(.textPurple)
-                            .position(x: 175, y: 80)
+                            .position(x: 175, y: 65)
                             .kerning(0.5)
                     }
                     NavigationLink(destination: AboutView().navigationBarBackButtonHidden(true)) {
