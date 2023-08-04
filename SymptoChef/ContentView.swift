@@ -26,25 +26,28 @@ struct ContentView: View {
                         Text("Find a Recipe")
                             .font(.title)
                             .foregroundColor(.textPurple)
-                            .position(x: 175, y: 100)
+                            .position(x: 175, y: 120)
                     }
                     NavigationLink(destination: ResearchView().navigationBarBackButtonHidden(true)) {
                         Text("Research")
                             .font(.title2)
                             .foregroundColor(.textPurple)
-                            .position(x: 175, y: 80)
+                            .position(x: 175, y: 160)
+                            .kerning(0.5)
                     }
                     NavigationLink(destination: HelpPage().navigationBarBackButtonHidden(true)) {
                         Text("Help")
                             .font(.title2)
                             .foregroundColor(.textPurple)
-                            .position(x: 175, y: 0)
+                            .position(x: 175, y: 80)
+                            .kerning(0.5)
                     }
                     NavigationLink(destination: AboutView().navigationBarBackButtonHidden(true)) {
                         Text("Meet the Developers")
                             .font(.title2)
                             .foregroundColor(.textPurple)
-                            .position(x: 175, y: -80)
+                            .position(x: 175, y: 0)
+                            .kerning(0.5)
                     }
                 }
                 .padding()
